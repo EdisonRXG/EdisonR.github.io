@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>webview修改无法识别jquery | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="对接第三方  webview加载富文本 图片加载不出来123&amp;lt;img data-lazyload=&amp;quot;true&amp;quot; data-original=&amp;quot;https://image.juntu.com/uploadfile/2018/0326/20180326024516906.jpg&amp;quot;     src=&amp;quot;https://static.juntu.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webview修改无法识别jquery">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/Android Webview无法识别识别加载JQuery/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="对接第三方  webview加载富文本 图片加载不出来123&amp;lt;img data-lazyload=&amp;quot;true&amp;quot; data-original=&amp;quot;https://image.juntu.com/uploadfile/2018/0326/20180326024516906.jpg&amp;quot;     src=&amp;quot;https://static.juntu.com">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-27T09:12:14.231Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webview修改无法识别jquery">
+<meta name="twitter:description" content="对接第三方  webview加载富文本 图片加载不出来123&amp;lt;img data-lazyload=&amp;quot;true&amp;quot; data-original=&amp;quot;https://image.juntu.com/uploadfile/2018/0326/20180326024516906.jpg&amp;quot;     src=&amp;quot;https://static.juntu.com">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Android Webview无法识别识别加载JQuery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/22/Android Webview无法识别识别加载JQuery/" class="article-date">
+  <time datetime="2019-02-22T07:16:36.000Z" itemprop="datePublished">2019-02-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      webview修改无法识别jquery
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="对接第三方-webview加载富文本-图片加载不出来"><a href="#对接第三方-webview加载富文本-图片加载不出来" class="headerlink" title="对接第三方  webview加载富文本 图片加载不出来"></a>对接第三方  webview加载富文本 图片加载不出来</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img data-lazyload=&quot;true&quot; data-original=&quot;https://image.juntu.com/uploadfile/2018/0326/20180326024516906.jpg&quot;</span><br><span class="line">     src=&quot;https://static.juntu.com/images/transparent.gif&quot;</span><br><span class="line">     style=&quot;width: 420px; height: 315px&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>从详情摘出来 加载不出来的图片</p>
+<ul>
+<li>[ data-lazyload data-original ]<br>这两个标签是jquery是懒加载 src是一个1像素的gif占位  加载成功替换data-original真正的图片地址</li>
+</ul>
+<h6 id="注入JQuery可以参考这里面的文章给你"><a href="#注入JQuery可以参考这里面的文章给你" class="headerlink" title="注入JQuery可以参考这里面的文章给你"></a>注入JQuery可以参考这里面的文章给你</h6><p><a href="https://www.jianshu.com/p/3bacb6342f45/" target="_blank" rel="noopener">Android WebView注入JQuery、JS脚本及执行无效的问题解决</a></p>
+<h6 id="我项目中只是做基础的图片和文字的富文本显示-肯定不用这么麻烦了-括弧笑"><a href="#我项目中只是做基础的图片和文字的富文本显示-肯定不用这么麻烦了-括弧笑" class="headerlink" title="我项目中只是做基础的图片和文字的富文本显示 肯定不用这么麻烦了 括弧笑"></a>我项目中只是做基础的图片和文字的富文本显示 <del>肯定不用这么麻烦了</del> 括弧笑</h6><p>这次还是用的Jsoup 替换属性<br>不过这次先要获取data-original的真正地址值  然后重新设置给src<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Document doc = Jsoup.parse(htmltext);</span><br><span class="line">       Elements elements = doc.getElementsByTag(&quot;img&quot;);</span><br><span class="line">       for (Element element : elements) &#123;</span><br><span class="line"></span><br><span class="line">           Attributes attributes = element.attributes();</span><br><span class="line">           attributes.put(&quot;style&quot;, &quot;max-width: 100%;height: auto;&quot;);</span><br><span class="line">           String s = attributes.get(&quot;data-original&quot;);</span><br><span class="line">           if (!s.isEmpty() &amp;&amp; s.endsWith(&quot;.jpg&quot;)) &#123;</span><br><span class="line">               attributes.put(&quot;src&quot;, s);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       return doc.toString();</span><br></pre></td></tr></table></figure></p>
+<h6 id="最后引用还是要注意混淆"><a href="#最后引用还是要注意混淆" class="headerlink" title="最后引用还是要注意混淆"></a>最后引用还是要注意混淆</h6><p> -keep class org.jsoup.**</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/22/Android Webview无法识别识别加载JQuery/" data-id="cjw6645an0003k8vkiikt8pbl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/22/webview加载富文本 图片自适应/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          webview加载html文本图片适配
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/12/flutter页面状态保持/">flutter页面状态保持</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/22/webview加载富文本 图片自适应/">webview加载html文本图片适配</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/22/Android Webview无法识别识别加载JQuery/">webview修改无法识别jquery</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
